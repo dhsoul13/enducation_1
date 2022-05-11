@@ -1,8 +1,242 @@
-@import "fonts";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./var";
+@import './mixin.scss';
 
-body {
-    font-family: noto;
-    font-size: 35px;
-    color:wheat;
-    background-image: url("@img/image-removebg.png");
+ul,li{
+    list-style: none;
+    padding: 0px;
+    margin: 0;
 }
+.container{
+    max-width: 956px;
+}
+.header{
+    min-height: 72px;
+    box-shadow: 0px 0px 16px 0px #26262629;
+}
+.button__header{
+    width: 78px;
+    min-height: 40px; 
+    background-color: white;
+    a{
+        color: black;
+    }
+}
+.header__backet{
+    margin-left: 27px;
+
+}
+body{
+    height: 100vh;
+    color: #000;
+}
+.main{
+    flex: auto;
+    padding: 56px 0px 100px 0px;
+}
+.card{
+    height: 366px;
+    width: 308px;
+}
+.main__serch{
+    margin: 56px 0px;
+}
+.main__input{
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #757575;
+}
+.nav-link{
+    width: 100%;
+}
+.main__input:focus{
+   border: 0; 
+   box-shadow: none;
+   border-bottom: 1px solid black;
+}
+.main__cards{
+    justify-content: space-between;
+}
+@include _768{
+    .main__cards{
+        justify-content: space-evenly;
+    }
+}
+.card__tag-reg{
+    display: flex;
+}
+.card{
+    border: none
+}
+.card__tag{
+    display: flex;
+}
+.card__title{
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+}
+.card__time{
+font-size: 13px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.card__tag-reg{
+    margin: 4px 0px;
+}
+.card__img{
+    width: 100%;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.card__title{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+.card__time{
+font-size: 13px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+}
+.card__tag{
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+.card__tag-list{
+    position: relative;
+    margin-right: 6px ;
+    padding-left: 6px;
+}
+.card__tag-list::before{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    transform: translate(-50%,  0%);
+    position:absolute;
+    top:50%;
+    left: 0px;
+    background-color: rgba(29, 29, 29, 1);
+}
+.main__button-conatainer{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 0px 0px;
+}
+.main__button{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: inherit;
+    border: 1px solid rgba(29, 29, 29, 0.1);
+}
+.footer{
+    background: rgba(38, 38, 38, 1);
+    &__header{
+        padding-top: 56px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid white
+    }
+    &__block-1{
+        display: flex;
+        flex-direction: column;
+        width: 227px;
+    }
+    &__hesh{
+        margin-top: 33px;
+        margin-bottom: 22px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    &__links-1{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__links-1 li{
+        margin-bottom: 23px;
+    }
+    &__links-1 li a{
+        color: #fff;
+    }
+    &__links-2{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__links-2 li{
+        margin-bottom: 23px;
+    }
+    &__links-2 li a{
+        color: #fff;
+    }
+    &__hesh span{
+        color: rgba(73, 161, 68, 1);
+    }
+    &__socials{
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    &__socials li {
+        margin-right: 20px;
+    }
+    &__body{
+        padding-top: 32px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid white;
+        justify-content: space-between;
+    }
+    &__dow{
+        padding-top: 41px;
+        padding-bottom: 39px;
+        border-bottom: 1px solid white
+    }
+    &__footer{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        h2{
+            color: #fff;
+        }
+    }
+    &__dow-app{
+        margin-right: 41px
+    }
+    
+
+}
+
+.form-select{
+    background-color:rgba(29, 29, 29, 1);
+    color: #fff;
+    option{
+        color: #fff;
+    }
+}
+
+@include _768{
+    .footer .col-4{
+        max-width: calc(100% / 3)
+    }
+}
+@import "./normalize.scss";

@@ -1,6 +1,6 @@
-import * as flsFunctions from './modules/function.js';
+import bootstrap from "bootstrap";
+import cards from "./modules/cards.js";
+import renderCard from "./modules/cards.js";
+import showMoreCard from "./modules/showMoreCard.js";
 
-flsFunctions.isWebp();
-
-import Swiper, { Navigation, Pagination } from 'swiper';
-
+cards()
